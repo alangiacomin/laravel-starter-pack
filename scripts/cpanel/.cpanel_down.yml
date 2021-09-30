@@ -1,0 +1,8 @@
+---
+deployment:
+    tasks:
+        - echo "INIZIO $(date)"
+
+        - php artisan down --render="errors::503"
+
+        - echo "FINE $(date)"

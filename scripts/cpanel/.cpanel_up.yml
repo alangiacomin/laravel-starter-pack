@@ -1,0 +1,8 @@
+---
+deployment:
+    tasks:
+        - echo "INIZIO $(date)"
+
+        - php artisan up
+
+        - echo "FINE $(date)"

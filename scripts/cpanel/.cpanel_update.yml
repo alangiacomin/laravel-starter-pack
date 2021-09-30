@@ -1,0 +1,22 @@
+---
+deployment:
+    tasks:
+        - echo "INIZIO $(date)"
+
+        - export DEPLOYPATH=/home/folder/subfolder
+
+        - /opt/cpanel/composer/bin/composer install
+
+        - rm -rf ${DEPLOYPATH}/js
+        - /bin/cp --update --force -R public/js/ ${DEPLOYPATH}/js
+
+        - rm -rf ${DEPLOYPATH}/css
+        - /bin/cp --update --force -R public/css/ ${DEPLOYPATH}/css
+
+        - rm -rf ${DEPLOYPATH}/index.php
+        - /bin/cp --update --force -R public/index.php ${DEPLOYPATH}/index.php
+
+        - rm -rf ${DEPLOYPATH}/robots.txt
+        - /bin/cp --update --force -R public/robots.txt ${DEPLOYPATH}/robots.txt
+
+        - echo "FINE $(date)"

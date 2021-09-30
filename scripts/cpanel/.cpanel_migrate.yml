@@ -1,0 +1,8 @@
+---
+deployment:
+    tasks:
+        - echo "INIZIO $(date)"
+
+        - php artisan migrate --force
+
+        - echo "FINE $(date)"

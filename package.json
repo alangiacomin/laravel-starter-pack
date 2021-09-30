@@ -1,0 +1,46 @@
+{
+    "private": true,
+    "scripts": {
+        "copy": "",
+        "clean": "node ./scripts/clean.js",
+        "start": "npm run dev -- watch",
+        "dev": "npm run clean && mix",
+        "dev2": "webpack --mode development",
+        "build": "webpack --mode production --devtool source-map",
+        "prod": "mix --production",
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "lint": "eslint --ext .jsx resources/js/**/*.{js,jsx}",
+        "lint:watch": "esw --watch --color --ext .jsx resources/js/**/*.{js,jsx}"
+    },
+    "dependencies": {
+        "@auth0/auth0-react": "^1.8.0",
+        "axios": "^0.21",
+        "bootstrap": "^4.6.0",
+        "classnames": "^2.3.1",
+        "connected-react-router": "^6.9.1",
+        "prop-types": "^15.7.2",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-redux": "^7.2.5",
+        "react-router": "^5.2.1",
+        "react-router-dom": "^5.3.0",
+        "redux": "^4.1.1"
+    },
+    "devDependencies": {
+        "@babel/eslint-parser": "^7.15.7",
+        "@babel/preset-react": "^7.14.5",
+        "@testing-library/react": "^12.1.0",
+        "eslint": "^7.32.0",
+        "eslint-config-airbnb": "^18.2.1",
+        "eslint-config-react-app": "^6.0.0",
+        "eslint-import-resolver-alias": "^1.1.2",
+        "eslint-plugin-babel": "^5.3.1",
+        "eslint-plugin-react": "^7.26.0",
+        "laravel-mix": "^6.0.6",
+        "redux-devtools-extension": "^2.13.9",
+        "resolve-url-loader": "^4.0.0",
+        "sass": "^1.39.2",
+        "sass-loader": "^12.1.0"
+    }
+}
